@@ -43,14 +43,15 @@ ion-button{
   float: right;
   margin-top: 4em;
   margin-right: 2em;
-  background-color:#fcdcf8;
-  border: 3px solid #74226C;
+  background-color:#74226C;
+  border: 4px solid #fcdcf8;
+  box-shadow: 4px 5px #888888;
   border-radius: 50%;
   cursor: pointer;
   height: 50px;
 }
 ion-icon{
-  color:#74226C;
+  color:#fcdcf8;
   
 }
 h4{
