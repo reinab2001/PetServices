@@ -1,9 +1,33 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
-    <ion-title>sign-up</ion-title>
+    <ion-title>signIn</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
-
+  <div class="header">
+    <img class="signUp" src="../assets/img/signup.png" alt="signIn">
+  </div>
+  <div class="logIn">
+    <div >
+      <ion-icon name="person"></ion-icon>
+      <input type="text" name="username" placeholder="Username">
+    </div>
+    <div>
+      <ion-icon name="lock-closed"></ion-icon>
+      <input type="password" name="password" placeholder="Password">
+    </div>
+    <div>
+      <ion-icon name="call"></ion-icon>
+      <input type="text" name="phone" placeholder="Phone Number">
+    </div>
+    <div>
+      <ion-icon name="location"></ion-icon>
+      <input type="text" name="location" placeholder="Address">
+    </div>
+    
+    <p>New member? <span >Sign up</span></p>
+    
+  </div>
+  <ion-button fill=clear><ion-icon class="arrow" name="chevron-forward-outline"></ion-icon></ion-button>
 </ion-content>
