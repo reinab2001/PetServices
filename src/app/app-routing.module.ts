@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'sign-up',
+    redirectTo: 'profile',
     pathMatch: 'full'
   },
   {
@@ -18,6 +18,23 @@ const routes: Routes = [
   {
     path: 'sign-up',
     loadChildren: () => import('./sign-up/sign-up.module').then( m => m.SignUpPageModule)
+  },
+  {
+    path: 'pet-services',
+    loadChildren: () => import('./pet-services/pet-services.module').then( m => m.PetServicesPageModule)
+  },
+  {
+    path: 'pet-walkers',
+    loadChildren: () => import('./pet-walkers/pet-walkers.module').then( m => m.PetWalkersPageModule)
+  },
+  {
+    path: 'pet-sitters',
+    loadChildren: () => import('./pet-sitters/pet-sitters.module').then( m => m.PetSittersPageModule)
+  },
+
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   },
 ];
 
