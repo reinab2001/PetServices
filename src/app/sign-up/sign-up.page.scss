@@ -45,9 +45,14 @@ p{
     margin-top: 3em;
     font-size: 0.9em;
 }
-span{
-    text-decoration: underline;
+
+a{
+    color: inherit;
     font-weight: bold;
+}
+a:hover{
+    color: #84677E;
+    font-style: italic;
 }
 ion-button{
     float: right;
