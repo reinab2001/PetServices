@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 export interface PetWalker{
-  id: string;
+  id?: string;
   // eslint-disable-next-line @typescript-eslint/naming-convention
   full_name: string;
   age: string;

@@ -1,13 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Montserrat:wght@300&family=Revalia&display=swap');
-ion-toolbar{
-    --ion-color: #74226C;
+ion-content {
+    --offset-bottom: auto!important;
+    --overflow: hidden;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+}
+
+.toolbar{
+    background-color: #74226C;
     border: 3px solid #fcdcf8;
     border-radius: 5px;
+    height: 75px;
 }
 ion-title{
     color: #fcdcf8;
     font-family: 'Marcellus SC', serif;
     font-size: 1.7em;
+    margin-top: 10px;
 }
 .arrow{
     float: right;
@@ -35,8 +46,8 @@ a{
     height: 70px;
     width: 280px;
     border-radius: 5px;
-    position: absolute;
-    // bottom: 0;
+    position: fixed;
+    bottom: 0;
     justify-content: space-between;
     padding-top: 10px;
 }
@@ -63,4 +74,8 @@ a{
 }
 .btn3{
     width: 27%;
+}
+.list{
+    position: relative;
+    bottom: 3.5em;
 }

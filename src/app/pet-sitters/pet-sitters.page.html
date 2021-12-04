@@ -1,12 +1,15 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Pet Sitters</ion-title>
+  <ion-toolbar >
+    <div class="toolbar">
+      <ion-title>Pet Sitters</ion-title>
     <img class="arrow" src="../assets/img/arrow.png" alt="Arrow">
+    </div>
+    
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
+  <ion-list class="list">
     <a routerLink="/profile" *ngFor="let sitter of sitters">
       <ion-item>
         <ion-avatar slot="start">
