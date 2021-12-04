@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { PetSitterService, PetSitter } from '../pet-sitter.service';
 
 @Component({
   selector: 'app-pet-sitters',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PetSittersPage implements OnInit {
 
-  constructor() { }
+  sitters: PetSitter[];
+  constructor(private router: Router, private service: PetSitterService) { }
 
   ngOnInit() {
-  }
+    this.service.getAllPetSitters().subscribe(response =>{
+      this.sitters = response;
+      console.log(this.sitters);
+    });
 
+  }
 }

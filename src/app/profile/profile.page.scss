@@ -55,7 +55,8 @@ ion-button{
     height: 70px;
     width: 280px;
     border-radius: 5px;
-    position: relative;
+    position: absolute;
+    bottom: 0;
     justify-content: space-between;
 }
 .menu{

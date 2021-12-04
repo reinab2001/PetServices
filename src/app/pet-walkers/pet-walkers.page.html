@@ -8,18 +8,19 @@
 <ion-content>
   <ion-list>
     
-    <a routerLink="/profile">
+    <a (click)="findProfile($event)" routerLink="/profile" *ngFor="let walker of walkers">
       <ion-item>
         <ion-avatar slot="start">
-          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+          <img src="{{walker.image}}">
         </ion-avatar>
-        <ion-label class="label">Pet Walker</ion-label>
+        <ion-label class="label">{{walker.full_name}}</ion-label>
         <ion-icon name="ellipse"></ion-icon>
       </ion-item>
     </a>
     
   </ion-list>
   <div class="footer">
+    <ion-footer>
     <ion-button routerLink="/home" class="btn1" fill="clear">
       <ion-icon class="menu" name="menu"></ion-icon>
     </ion-button>
@@ -29,5 +30,6 @@
     <ion-button routerLink="/pet-sitters" class="btn3" fill="clear">
       <ion-icon class="petSitter" name="bed"></ion-icon>
     </ion-button>
+  </ion-footer>
   </div>
 </ion-content>

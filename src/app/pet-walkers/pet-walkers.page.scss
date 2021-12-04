@@ -32,8 +32,8 @@ ion-icon{
     height: 70px;
     width: 280px;
     border-radius: 5px;
-    position: relative;
-    top: 21.5em;
+    position: absolute;
+    // bottom: 0;
     justify-content: space-between;
     padding-top: 10px;
 }

@@ -7,12 +7,12 @@
 
 <ion-content>
   <ion-list>
-    <a routerLink="/profile">
+    <a routerLink="/profile" *ngFor="let sitter of sitters">
       <ion-item>
         <ion-avatar slot="start">
-          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+          <img src="{{sitter.image}}">
         </ion-avatar>
-        <ion-label class="label">Pet Sitter</ion-label>
+        <ion-label class="label">{{sitter.full_name}}</ion-label>
         <ion-icon name="ellipse"></ion-icon>
       </ion-item>
     </a>

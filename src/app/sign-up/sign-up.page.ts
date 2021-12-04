@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import{ NgForm } from '@angular/forms';
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.page.html',
@@ -10,6 +10,9 @@ export class SignUpPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+  onSubmit(form: NgForm){
+    const card= form.value;
   }
 
 }
