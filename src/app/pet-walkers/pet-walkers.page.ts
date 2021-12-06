@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 import { PetWalkerService, PetWalker } from '../pet-walker.service';
 @Component({
   selector: 'app-pet-walkers',
@@ -16,6 +16,23 @@ export class PetWalkersPage implements OnInit {
       console.log(this.walkers);
     });
 
+  }
+
+  onClick(id: string){
+    this.service.getDetails(id).subscribe(response => {
+      this.walkers = response;
+      this.send(this.walkers);
+      console.log(response);
+    });
+  }
+
+  send(walkers: PetWalker[]){
+    const navigationExtras: NavigationExtras = {
+      state: {
+      walkers,
+      }
+    };
+    this.router.navigate(['/profile'], navigationExtras);
   }
 
 }

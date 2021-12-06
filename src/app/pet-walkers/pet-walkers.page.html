@@ -10,15 +10,13 @@
 <ion-content >
   <ion-list class="list">
     
-    <a (click)="findProfile($event)" routerLink="/profile" *ngFor="let walker of walkers">
-      <ion-item>
+      <ion-item *ngFor="let walker of walkers" (click)="onClick(walker.id)">
         <ion-avatar slot="start">
           <img src="{{walker.image}}">
         </ion-avatar>
         <ion-label class="label">{{walker.full_name}}</ion-label>
         <ion-icon name="ellipse"></ion-icon>
       </ion-item>
-    </a>
     
   </ion-list>
   <div class="footer">
