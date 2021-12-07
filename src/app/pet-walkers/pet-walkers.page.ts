@@ -9,6 +9,7 @@ import { PetWalkerService, PetWalker } from '../pet-walker.service';
 })
 export class PetWalkersPage implements OnInit {
   walkers: PetWalker[];
+  walkers2: PetWalker[];
   constructor(private router: Router, private service: PetWalkerService) { }
 
   ngOnInit() {
@@ -21,16 +22,16 @@ export class PetWalkersPage implements OnInit {
 
   onClick(id: string){
     this.service.getDetails(id).subscribe(response => {
-      this.walkers = response;
-      this.send(this.walkers);
+      this.walkers2 = response;
+      this.send(this.walkers2);
       console.log(response);
     });
   }
 
-  send(walkers: PetWalker[]){
+  send(walkers2: PetWalker[]){
     const navigationExtras: NavigationExtras = {
       state: {
-      walkers,
+      walkers2,
       }
     };
     this.router.navigate(['/profile'], navigationExtras);

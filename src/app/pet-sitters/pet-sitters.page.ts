@@ -48,6 +48,7 @@ import { PetSitterService, PetSitter } from '../pet-sitter.service';
 })
 export class PetSittersPage implements OnInit {
   sitters: PetSitter[];
+  sitters2: PetSitter[];
   constructor(private router: Router, private service: PetSitterService) { }
 
   ngOnInit() {
@@ -60,16 +61,16 @@ export class PetSittersPage implements OnInit {
 
   onClick2(id: string){
     this.service.getDetails2(id).subscribe(response => {
-      this.sitters = response;
-      this.send2(this.sitters);
+      this.sitters2 = response;
+      this.send2(this.sitters2);
       console.log(response);
     });
   }
 
-  send2(sitters: PetSitter[]){
+  send2(sitters2: PetSitter[]){
     const navigationExtras: NavigationExtras = {
       state: {
-      sitters,
+      sitters2,
       }
     };
     this.router.navigate(['/sitter-profile'], navigationExtras);
