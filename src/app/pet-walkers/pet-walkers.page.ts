@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { PetWalkerService, PetWalker } from '../pet-walker.service';
+
 @Component({
   selector: 'app-pet-walkers',
   templateUrl: './pet-walkers.page.html',

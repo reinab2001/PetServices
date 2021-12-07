@@ -12,6 +12,7 @@ export interface PetSitter{
   phone_num: string;
   image: string;
 }
+
 @Injectable({
   providedIn: 'root'
 })
@@ -20,6 +21,9 @@ export class PetSitterService {
     constructor( private http: HttpClient) { }
     getAllPetSitters(){
       return this.http.get<[PetSitter]>(this.baseUrl+ 'getAllPetSitters.php');
+    }
+    getDetails2(id: string){
+      return this.http.get<[PetSitter]>(this.baseUrl+ 'profileSitter.php?id='+id);
     }
 }
 

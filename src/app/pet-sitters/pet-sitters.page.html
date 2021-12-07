@@ -10,18 +10,16 @@
 
 <ion-content>
   <ion-list class="list">
-    <a routerLink="/profile" *ngFor="let sitter of sitters">
-      <ion-item>
+
+      <ion-item *ngFor="let sitter of sitters" (click)="onClick2(sitter.id)">
         <ion-avatar slot="start">
           <img src="{{sitter.image}}">
         </ion-avatar>
         <ion-label class="label">{{sitter.full_name}}</ion-label>
         <ion-icon name="ellipse"></ion-icon>
       </ion-item>
-    </a>
-    
-    
   </ion-list>
+  
   <div class="footer">
     <ion-button routerLink="/home" class="btn1" fill="clear">
       <ion-icon class="menu" name="menu"></ion-icon>
