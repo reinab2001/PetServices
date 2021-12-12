@@ -2,20 +2,17 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 export interface User{
-  id: string;
-  // eslint-disable-next-line @typescript-eslint/naming-convention
-  phone_num: string;
   username: string;
   password: string;
-  address: string;
 }
+
 @Injectable({
   providedIn: 'root'
 })
-export class SignupService {
+export class SigninService {
   private baseUrl='http://localhost/petServices/';
   constructor( private http: HttpClient) { }
-  insertUser(user: User){
-    return this.http.post<[User]>(this.baseUrl+ 'signup.php', JSON.stringify(user));
+  findUser(username: string, password: string){
+    return this.http.get<[User]>(this.baseUrl+ 'signin.php?username='+username+'&password='+password);
   }
 }
