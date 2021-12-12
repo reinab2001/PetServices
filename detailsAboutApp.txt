@@ -1,0 +1,19 @@
+Pet Services:
+Hello Doctor!
+First of all, as you can see my github repositroy is a bit messed up but I was scared to delete anything 
+incase it might ruin the whole application. I did two branches one for the frontend and one for the backend.
+The php files are all found under "php work" commit. 
+The database is found under the last commit named  "database".
+Everything else (frontend) is in the master branch .
+
+I used ionic for my frontend so you need to run ionic serve -l (would display it with ionic lab)
+It will display the home page and you can choose either to sign in or sign up 
+then if you signed in/up successfully it will take you to a new page that shows you our services.
+You can choose whether you want a list of pet sitters or dog walkers. According to your choise, you will be 
+seeing a page with a list of names of the currently available employees. You can press on any username and
+it will take you to their own detailed profile which is being retrieved from the database.(i only downloaded to images
+and used the same two images for the profile pictures as examples) Lastly, there is a bottom navbar where you can 
+switch between the home-dog walkers-pet sitters pages.
+
+This is a summarization of my app! I hope you like it! I worked really hard in order to get this done. 
+Thank you for your efforts. Nice to meet you.
